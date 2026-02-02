@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
 import 'screens/home_screen.dart';
-import 'services/api_service.dart';
 
 void main() {
-  ApiService().getTodaysToons();
   runApp(const App());
 }
 
@@ -13,7 +12,16 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      scrollBehavior: const MaterialScrollBehavior().copyWith(
+        dragDevices: {
+          PointerDeviceKind.mouse,
+          PointerDeviceKind.touch,
+          PointerDeviceKind.stylus,
+          PointerDeviceKind.unknown
+        },
+      ),
+      
       home: HomeScreen(),
     );
   }
