@@ -1,16 +1,14 @@
-# toonflix
+# Flutter Webtoon App Clone
 
-A new Flutter project.
+노마드코더의 'Flutter로 웹툰 앱 만들기' 강의를 시청하며 학습한 프로젝트입니다.
 
-## Getting Started
+## Key Learning
+1. API Data Fetching 
+2. 비동기 UI 렌더링 (FutureBuilder)
+3. 화면 전환 및 데이터 전달 (Navigator)
+4. 데이터 저장 (Shared Preferences)
 
-This project is a starting point for a Flutter application.
+## Trouble Shooting
+문제 : API에서 제공하는 이미지가 특정 브라우저 외에서 호출할 때 403 Forbidden 에러 발생
+해결 : NetworkImage 호출 시 header에 특정 User-Agent 값을 추가하여 접근 권한 문제 해결
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
